@@ -5,7 +5,7 @@ root = 'https://www.reddit.com/r/LaptopDeals/new/?f=flair_name%3A%22%F0%9F%9B%92
 result = requests.get(root)
 content = result.text
 soup = BeautifulSoup(content, 'lxml')
-TITLE = ''
+TITLE = '600-700dlls.text'
 
 box = soup.find_all('article', class_='yn9v_hQEhjlRNZI0xspbA')
 
@@ -22,7 +22,7 @@ for h3 in box:
 
 my_data = dict(zip(links, titles))
 
-with open('600-700dlls.text', 'w') as file:
+with open(TITLE, 'w') as file:
     for link, title in my_data.items():
         price = title.rsplit("$", 1)[1].split(" ", 1)[0]
         file.write(f"Title: {title}\nPrice: ${price}\nLink: {link}\n\n")
