@@ -1,4 +1,4 @@
-from Bootcamp_webscrapping import webget
+from reddit_scrapper import webget
 
 
 five_to_six = 'https://www.reddit.com/r/LaptopDeals/?f=flair_name%3A%22%F0%9F%9B%92%24500-%24600%F0%9F%9B%92%22'
